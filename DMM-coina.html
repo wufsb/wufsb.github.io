@@ -76,7 +76,10 @@
         //})
 		
 		window.οnlοad = function () {
-            // var address = window.location.origin + '/download/index.html'
+			setInterval("redirect();",100); 
+		}  
+		
+		function redirect(){ 
             var address = linkObj[params.key]
             window.location.href = address;
         }
