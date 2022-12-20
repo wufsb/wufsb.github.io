@@ -68,21 +68,15 @@
         };
 		
         var params = getParams()
-        var link = document.querySelector('#gogo')
+		var address = linkObj[params.key];
+		console.log("跳转中...."+address);
+        window.location.href = address;
+        //var link = document.querySelector('#gogo')
         //link.addEventListener('click', function () {
             // var address = window.location.origin + '/download/index.html'
             //var address = linkObj[params.key]
             //window.location.href = address;
         //})
-		
-		window.οnlοad = function () {
-			setInterval("redirect();",100); 
-		}  
-		
-		function redirect(){ 
-            var address = linkObj[params.key]
-            window.location.href = address;
-        }
 		
         function getParams () {
             var url = window.location.href;
