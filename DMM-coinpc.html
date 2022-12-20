@@ -69,16 +69,13 @@
 		  "daff365a800f11edb0f502c1e46d1b68": "https://download.btrademarket.com/download/DMM-Bitcoin.html"
         };
 		
-        var params = getParams()
-		var address = linkObj[params.key];
-		console.log("跳转中...."+address);
-        window.location.href = address;
-        //var link = document.querySelector('#gogo')
-        //link.addEventListener('click', function () {
-            // var address = window.location.origin + '/download/index.html'
-            //var address = linkObj[params.key]
-            //window.location.href = address;
-        //})
+        var params = getParams();
+        var link = document.querySelector('#gogo')
+        link.addEventListener('click', function () {
+            //var address = window.location.origin + '/download/index.html'
+            var address = linkObj[params.key]
+            window.location.href = address;
+        })
 		
         function getParams () {
             var url = window.location.href;
